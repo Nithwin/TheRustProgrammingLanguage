@@ -1,3 +1,37 @@
+enum Direction {
+    Up,
+    Down,
+    Left, 
+    Right,
+}
+
+enum GameItem {
+    Potion(i32),
+    Map(String),
+    Weapon {
+        damage: i32,
+    },
+}
+
+fn use_item(item : GameItem){
+    match item {
+        GameItem::Potion(heal_amount) => {
+            print!("{}", heal_amount);
+        }
+        GameItem::Map(location) => {
+            print!("{}", location);
+        }
+        GameItem::Weapon { damage } => {
+            print!("{}", damage);
+        }
+    }
+}
+
+fn main(){
+
+}
+
+
 // enum IpAddrKind {
 //     V4,
 //     V6,
@@ -24,9 +58,9 @@
 //     };
 
 
-fn main() {
-    // let four = IpAddrKind::V4;
-    // let six = IpAddrKind::V6;
-    let mut a: u32 = 0;
-    println!("Hello, world! {a}");
-}
+// fn main() {
+//     // let four = IpAddrKind::V4;
+//     // let six = IpAddrKind::V6;
+//     let mut a: u32 = 0;
+//     println!("Hello, world! {a}");
+// }
